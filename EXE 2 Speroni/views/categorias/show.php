@@ -1,7 +1,7 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: aluno
- * Date: 12/04/18
- * Time: 16:03
- */
+
+
+<div class="container">
+    <h2> Categoria <?= $categoria->getNome() ?></h2>
+
+    <p><?= $categoria->getDescricao() ?></p>
+</div>

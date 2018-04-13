@@ -7,5 +7,5 @@
         header('Location: index.php');
     endif;
     ?>
-    <?php include '../../perfil.php' ?>
+    <?php include 'perfil.php' ?>
 </html>

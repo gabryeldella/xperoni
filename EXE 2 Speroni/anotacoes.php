@@ -2,7 +2,7 @@
 
 #CategoriaCrud.php
 
- public function getCategorias(){
+public function getCategorias(){
 
      $consulta = "select * from categoria";
      $resultado = this->conexao->query($consulta);
@@ -19,4 +19,4 @@
          return $arrCategorias;
 }
 
-#CategoriaCrud.php/>
+#CategoriaCrud.php/> 

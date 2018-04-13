@@ -1,25 +1,24 @@
-<html>
-<head>
 
-    <title> Experoni </title>
+<?php //include 'perfil.php' ?>
 
-    <link rel="stylesheet" type="text/css" href="../../CSS/style.css">
-</head>
-
-<h1> Experoni 3 </h1>
-
+<h1> Categorias </h1>
+<meta charset="utf-8"
  <nav id="menu">
      <ul>
-        <li><a href="produtos.php?produto=eletronicos"> Eletrônicos </a></li>
-        <li><a href="produtos.php?produto=esportes">    Esportes    </a></li>
-        <li><a href="produtos.php?produto=moveis">      Móveis      </a></li>
-        <li><a href="produtos.php?produto=roupas">      Roupas      </a></li>
+         
+         <?php foreach ($categorias as $categoria): ?>
+                <li>
+                    <td scope="row"><?= $categoria->getId()?></td>
+                    <td>
+                        <a href="?action=show&id=<?= $categoria->getId() ?>">
+                            <?= $categoria->getNome()?>
+                        </a>
+                    </td>
+                </li>
+            <?php endforeach; ?>     
     </ul>
  </nav>
-<br>
-
-<?php include '../../perfil.php' ?>
-
+<br> 
 <form action="produtos.php" method="post">
     <label for="busca">Busca</label>
     <input type="text"   placeholder="Buscar" name="busca" id="busca" />
